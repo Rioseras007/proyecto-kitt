@@ -3,37 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Fredericka+the+Great&family=Indie+Flower&display=swap" rel="stylesheet">
 <title>KITT Dashboard Simulator</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h1 align="center" class="audiowide-regular">Bienvenido al Simulador del Dashboard de KITT</h1>
+    <div class="scanner">
+    <div class="light"> &nbsp;&nbsp;&nbsp;</div><div class="light"> &nbsp;&nbsp;&nbsp;</div><div class="light"> &nbsp;&nbsp;&nbsp;</div><div class="light"> &nbsp;&nbsp;&nbsp;</div>
+</div>
 
-    <div class="container" align="center">
-        <div class="box">
-            <h1>Imagen de referencia</h1>
-            <img src="kitt.webp" alt="Imagen de referencia" style="width:477px; height:500px;">
+    <div class="container" style="background-color: black; color: white; padding: 20px;display:flex;">
+        <div class="box" style="flex:2; margin-right: 20px;" >
+           
+            
+            <iframe src="https://geo.dailymotion.com/player.html?video=x42zuz6"style="width:477px; height:500px; border:none;"allowfullscreentitle="Dailymotion Video Player"allow="web-share"></iframe>
+            <iframe src="https://geo.dailymotion.com/player.html?video=x8nnxbm"style="width:477px; height:500px; border:none;"allowfullscreentitle="Dailymotion Video Player"allow="web-share"></iframe>
             <iframe src="https://geo.dailymotion.com/player.html?video=x35ovmn"style="width:477px; height:500px; border:none;"allowfullscreentitle="Dailymotion Video Player"allow="web-share"></iframe>
+            <iframe src="https://geo.dailymotion.com/player.html?video=x8ea54c"style="width:477px; height:500px; border:none;"allowfullscreentitle="Dailymotion Video Player"allow="web-share"></iframe>
+        </div>
         </div>
 
-        <div class="box">
-            <h1>Simulador del Dashboard de KITT</h1>
-            <p>Este es un simulador del dashboard de KITT, el famoso coche inteligente de la serie de televisión "Knight Rider".</p>
-            <p>El diseño se basa en la apariencia icónica del dashboard de KITT, con su estilo futurista y tecnología avanzada.</p>
+        <div class="box audiowide-regular" style="flex:1;  padding: 20px; border-radius: 10px; align-items: center; justify-content: center;">
+            <h1 align="center">Simulador del Dashboard de KITT</h1>
+            <p align="center">Este es un simulador del dashboard de KITT, el famoso coche inteligente de la serie de televisión "Knight Rider".</p>
+            <p align="center">El diseño se basa en la apariencia icónica del dashboard de KITT, con su estilo futurista y tecnología avanzada.</p>
             
-       <audio id="kitt-audio" autoplay="yes" controls="true">
-        <source src="Knight Rider.mp3" type="audio/mpeg">
-        <source src="musica.ogg" type="audio/ogg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
+   
 
             <!-- PANEL DE CONTROL DE VOZ (Reubicado) -->
             <div class="voice-controls">
+                   <audio id="kitt-audio" autoplay="yes" controls="true" >
+                     <source src="Knight Rider.mp3" type="audio/mpeg">
+                     <source src="musica.ogg" type="audio/ogg">
+                         Tu navegador no soporta el elemento de audio.
+                     </audio>
                 <div class="engine-status">SISTEMA: <span id="audio-status">OFF</span></div>
                 <button id="btn-init" class="btn-system">INICIALIZAR SISTEMAS</button>
                 <div class="mode-selector">
                     <button id="btn-music" class="btn-mode">MÚSICA</button>
                     <button id="btn-mic" class="btn-mode">MIC</button>
                     <button id="btn-off" class="btn-mode">OFF</button>
+                 
                 </div>
             </div>
         </div>
@@ -99,5 +112,7 @@
 
     <script src="sounds.js"></script>
     <script src="script.js"></script>
+    <br>
+    <br>
 </body>
 </html>
