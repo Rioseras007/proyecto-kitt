@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KITT Dashboard Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" align="center">
+        <div class="box">
+            <h1>Imagen de referencia</h1>
+            <img src="kitt.webp" alt="Imagen de referencia" style="width:477px; height:500px;">
+            <iframe src="https://geo.dailymotion.com/player.html?video=x35ovmn"style="width:477px; height:500px; border:none;"allowfullscreentitle="Dailymotion Video Player"allow="web-share"></iframe>
+        </div>
+
+        <div class="box">
+            <h1>Simulador del Dashboard de KITT</h1>
+            <p>Este es un simulador del dashboard de KITT, el famoso coche inteligente de la serie de televisión "Knight Rider".</p>
+            <p>El diseño se basa en la apariencia icónica del dashboard de KITT, con su estilo futurista y tecnología avanzada.</p>
+            
+       <audio id="kitt-audio" autoplay="yes" controls="true">
+        <source src="Knight Rider.mp3" type="audio/mpeg">
+        <source src="musica.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+            <!-- PANEL DE CONTROL DE VOZ (Reubicado) -->
+            <div class="voice-controls">
+                <div class="engine-status">SISTEMA: <span id="audio-status">OFF</span></div>
+                <button id="btn-init" class="btn-system">INICIALIZAR SISTEMAS</button>
+                <div class="mode-selector">
+                    <button id="btn-music" class="btn-mode">MÚSICA</button>
+                    <button id="btn-mic" class="btn-mode">MIC</button>
+                    <button id="btn-off" class="btn-mode">OFF</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PANEL PRINCIPAL -->
+    <div class="panel-principal">
+        <!-- BOTONERA IZQUIERDA -->
+        <div class="panel-lateral">
+            <table>
+                <tr><td><button class="botongreen">ALT</button></td></tr>
+                <tr><td><button class="botongreen">OIL PRESS</button></td></tr>
+                <tr><td><button class="botonred">OIL TEMP</button></td></tr>
+                <tr><td><button class="botonred">EGT</button></td></tr>
+                <tr><td><button class="botonred">FUEL</button></td></tr>
+            </table>
+        </div>
+
+        <!-- PANEL CENTRAL -->
+        <div class="panel-central">
+            <!-- MÓDULO DE VOZ -->
+            <div class="voice-module" id="voice">
+                <!-- Los LEDs se generan dinámicamente -->
+            </div>
+
+            <!-- BOTONERA CENTRAL -->
+            <div class="central">
+                <table border="1">
+                    <tr>
+                        <td><button class="gris"></button></td>
+                        <td><button class="negro"></button></td>
+                        <td><button class="normalcruise">NORMAL CRUISE</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="gris"></button></td>
+                        <td><button class="negro"></button></td>
+                        <td><button class="autocruise">AUTO CRUISE</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="verde"></button></td>
+                        <td><button class="negro"></button></td>
+                        <td><button class="pursuit">PURSUIT</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- BOTONERA DERECHA -->
+        <div class="panel-lateral">
+            <table>
+                <tr><td><button class="botongreen">AUX</button></td></tr>
+                <tr><td><button class="botongreen">SAT COMM</button></td></tr>
+                <tr><td><button class="botonred">ACC</button></td></tr>
+                <tr><td><button class="botonred">RADAR</button></td></tr>
+                <tr><td><button class="botonred">MAI</button></td></tr>
+            </table>
+        </div>
+    </div>
+
+  
+
+
+    <script src="sounds.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

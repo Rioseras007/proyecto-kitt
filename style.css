@@ -1,0 +1,314 @@
+/* ===================== */
+/* PANEL PRINCIPAL CENTRADO */
+/* ===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
+
+
+.panel-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* las botoneras y el centro se alinean arriba */
+    gap: 0px; /* espacio entre izquierda-centro-derecha */
+    margin-top: 40px;
+    background-color: #000000;
+    width: 40%;
+    height: 500px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+/* VARIABLES GLOBALES AUDIO */
+:root {
+    --led-on-bg: #B40522;
+    --led-on-glow: #ff0000;
+    --led-off-bg: #220000;
+}
+
+/* PANEL LATERAL */
+.panel-lateral {
+    width: 100px;
+    background-color: #171818;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: auto;
+}
+
+/* PANEL CENTRAL */
+.panel-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra módulo de voz y botonera */
+    margin-left: 0px; /* espacio para el panel lateral izquierdo */
+    margin-right: 0px; /* espacio para el panel lateral derecho */
+}
+
+/* BOTONERA CENTRAL */
+.central {
+    width: 260px;
+    background-color: #171818;
+    border: 1px solid #000;
+    margin-top: 0px;
+}
+
+/* VOICE MODULE */
+.voice-module {
+    display: grid;
+    grid-template-columns: repeat(3, 20px); /* Ajustado a 20px para coincidir con LEDs */
+    gap: 14px; /* separación igual al tamaño del LED */
+    margin-bottom: 30px;
+    background-color: #171818;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* COLUMNAS DEL VOICE MODULE */
+.column {
+    display: grid;
+    grid-template-rows: repeat(20, 6px);
+    gap: 3px;
+    padding: 5px;
+}
+
+/* MODIFICADOR PARA MODO MIC (Ahora Rojo Canónico) */
+.voice-module.mic-mode {
+    --led-on-bg: #B40522;
+    --led-on-glow: #ff0000;
+}
+
+/* LED */
+.led {
+    width: 20px;
+    height: 6px;
+    background: #220000;
+    border-radius: 2px;
+    transition: 0.08s;
+}
+
+/* LED encendido */
+.on {
+    background: var(--led-on-bg);
+    box-shadow:
+        0 0 4px var(--led-on-glow),
+        0 0 8px var(--led-on-glow);
+    transition: background 0.1s, box-shadow 0.1s;
+}
+
+/* PANEL DE CONTROL DE VOZ */
+.voice-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: auto;
+    margin-top: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.engine-status {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+#audio-status {
+    font-weight: bold;
+    color: #B40522; /* Rojo inicial */
+    transition: 0.5s;
+}
+
+#audio-status.running {
+    color: #A9D739; /* Verde (Activo) */
+    text-shadow: 0 0 8px #A9D73980;
+}
+
+#audio-status.suspended {
+    color: #ffcc00; /* Ambar (Pausa) */
+    text-shadow: 0 0 8px #ffcc0080;
+}
+
+.btn-system {
+    background: #A9D739;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(169, 215, 57, 0.4);
+    animation: pulse-init 2s infinite;
+}
+
+.mode-selector {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-mode {
+    background: #222;
+    color: #555;
+    border: 1px solid #444;
+    padding: 5px 10px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-mode.active {
+    background: #B40522;
+    color: white;
+    border-color: #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+}
+
+.btn-mode.active-mic {
+    background: #B40522;
+    color: white;
+    border-color: #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+}
+
+@keyframes pulse-init {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* ANIMACION VOICE MODULE (Eliminada la antigua para usar JS) */
+
+/* BOTONES */
+.botonred {
+    width:80px;
+    height:60px;
+    background-color:#9a0a0a;
+    border:1px solid #000;
+    border-radius:5px;
+    margin:10px;
+    font-weight:bold;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-transform:uppercase;
+     font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+}
+
+.botonred:hover {
+    background-color:#ce2626;
+    cursor:pointer;
+     font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+}
+
+.botongreen {
+    width:80px;
+    height:60px;
+    background-color:#A9D739;
+    border:1px solid #000;
+    border-radius:5px;
+    margin:10px;
+    font-weight:bold;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-transform:uppercase;
+     font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+}
+
+.botongreen:hover {
+    background-color:#86bc09;
+    cursor:pointer;
+}
+
+/* BLOQUES CENTRALES */
+.gris { width:20px; height:60px; background-color:grey; border:1px solid #000; border-radius:2px; margin:10px; }
+.negro { width:30px; height:60px; background-color:black; border:1px solid #000; border-radius:2px; margin:10px; }
+.verde { width:20px; height:60px; background-color:green; border:1px solid #000; border-radius:2px; margin:10px; }
+
+/* MODOS */
+.normalcruise, .autocruise, .pursuit {
+    width:120px;
+    height:60px;
+    border:1px solid #000;
+    border-radius:5px;
+    margin:10px;
+    font-weight:bold;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-transform:uppercase;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+}
+
+.normalcruise, .autocruise { background-color:#9b9c98; }
+.pursuit { background-color:#9D1926; }
+
+
+/* Botones centrales - hover */
+.normalcruise:hover {
+    background-color: #b0b1ac; /* un gris más claro */
+    box-shadow: 0 0 8px #ffffff80; /* resplandor sutil */
+    cursor: pointer;
+}
+
+.autocruise:hover {
+    background-color: #b0b1ac; /* igual gris claro para coherencia */
+    box-shadow: 0 0 8px #00ff0080; /* resplandor verde suave */
+    cursor: pointer;
+}
+
+.pursuit:hover {
+    background-color: #bf2c35; /* rojo más brillante */
+    box-shadow: 0 0 8px #ff000080; /* resplandor rojo */
+    cursor: pointer;
+}
+
+/* Modos de Conducción Activos (Selección Exclusiva) */
+.normalcruise.active, .autocruise.active {
+    background-color: #ffffff !important;
+    color: #000 !important;
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff40;
+    border-color: #fff;
+}
+
+.pursuit.active {
+    background-color: #ff0000 !important;
+    color: #fff !important;
+    box-shadow: 0 0 25px #ff0000, 0 0 50px #ff000060;
+    border-color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+.gris:hover
+    {
+        background-color: #a9a9a9;
+        cursor: pointer;
+    }
+.verde:hover
+    {
+        background-color: #13a513;
+        cursor: pointer;
+    }
