@@ -127,20 +127,25 @@ const KITT_Audio = {
 
 // --- ESCUCHA GLOBAL DE EVENTOS (Delegación de eventos) ---
 document.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
+    // Buscamos si el clic fue en un botón O en un enlace (ficha de personaje o botón volver)
+    const interactive = e.target.closest('button, a.character-card, a.btn-back, a.btn-system');
+    if (!interactive) return;
 
-    if (btn.id === 'btn-init') {
+    // Inicializar audio en la primera interacción
+    KITT_Audio.init();
+    if (KITT_Audio.ctx.state === 'suspended') KITT_Audio.ctx.resume();
+
+    if (interactive.id === 'btn-init') {
         KITT_Audio.playInit();
         return;
     }
 
-    if (['btn-music', 'btn-mic', 'btn-off'].includes(btn.id)) {
+    if (['btn-music', 'btn-mic', 'btn-off'].includes(interactive.id)) {
         KITT_Audio.playMode();
         return;
     }
 
-    if (btn.classList.contains('pursuit') || btn.classList.contains('turbo')) {
+    if (interactive.classList.contains('pursuit') || interactive.classList.contains('turbo')) {
         KITT_Audio.playPursuit();
     } else {
         KITT_Audio.playClick();
