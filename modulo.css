@@ -128,8 +128,112 @@ body{
 
 }
   
+  .amarillo:active
+{
+ background-color: var(--amarillo-kitt);
+ border: 3px solid;
+ border-color: var(--color-borde);
+ 
+  color: rgb(8, 215, 167);
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 161px;
+  height: 141px;
+ font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+ box-shadow: 0 0 15px #dee60680; /* resplandor sutil */
+
+}
+
+  .verde:active
+{
+ background-color: var(--verde-kitt);
+ border: 3px solid;
+ border-color: var(--color-borde);
+ color: rgb(8, 215, 167);
+ 
+ 
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 158px;
+  height: 139px;
+ font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+ box-shadow: 0 0 15px #04b23580; /* resplandor sutil */
+
+}
+
+ .rojo:active
+{
+ background-color: var(--rojo-kitt);
+ border: 3px solid;
+ border-color: var(--color-borde);
+color: rgb(8, 215, 167);
+ 
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 158px;
+  height: 139px;
+ font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+ box-shadow: 0 0 15px #e72502ea; /* resplandor sutil */
+
+}
+
+ .blanco:active
+{
+ background-color: var(--casi_blanco);
+ border: 3px solid;
+ border-color: var(--color-borde);
+  color: rgb(8, 215, 167);
+ 
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 158px;
+  height: 139px;
+ font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+ box-shadow: 0 0 15px #fffdfdea; /* resplandor sutil */
+
+}
+
+ .blanco2:active
+{
+ background-color: var(--casi_blanco);
+ border: 3px solid;
+ border-color: var(--color-borde);
+  color: rgb(8, 215, 167);
   
-  
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 158px;
+  height: 139px;
+ font-size: 1.1rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+ box-shadow: 0 0 15px #fffdfdea; /* resplandor sutil */
+
+}
+
+
+
+
+
+
+
+
+
+
+
   
   
   table {
