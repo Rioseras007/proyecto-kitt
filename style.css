@@ -18,8 +18,8 @@ body {
     gap: 0px; /* espacio entre izquierda-centro-derecha */
     margin-top: 40px;
     background-color: #0b0b0b;
-    width: 40%;
-    height: 500px;
+    width: 80%;
+    height: auto;
     border: 5px solid #000;
     border-radius: 10px;
     margin-left: auto;
@@ -533,3 +533,22 @@ body {
     font-size: 0.8rem;
     text-transform: uppercase;
 }
+.modulo1{
+
+position: relative;
+width:500px;
+height: auto;
+background-color: inherit;
+
+
+
+  }
+
+  .mivideo{
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+
+
+  }

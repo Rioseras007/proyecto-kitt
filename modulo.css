@@ -1,0 +1,164 @@
+  .audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  
+  
+  
+  
+  
+  /* Definición de variables globales */
+:root {
+  --rojo-kitt: #ad0304;   /* rojo kitt */
+  --amarillo-kitt: #fdff56; /* amarillo kitt */
+  --verde-kitt: #53ff55;      /* verde kitt */
+
+    --rojof-kitt: #af0304;   /* rojo kitt suerte */
+    --amarillof-kitt: #feff56; /* amarillo kitt */
+     --verdef-kitt: #63ff55;      /* verde kitt */
+     --color-borde: #171718;  /* color borde boton */
+     --casi_blanco:#ffffee; /*casi blanco */
+     --mi-gris:#AAAAAA;  /* gris kitt */
+
+}
+
+body{
+
+    background-color: #171718;
+}
+
+/* Uso de las variables */
+
+    /* Efecto click */
+    button:active {
+        transform: scale(0.95);
+    }
+
+
+
+.verde{
+ background-color: var(--verde-kitt);
+ border: 3px solid;
+ border-color: var(--color-borde);
+  color: black;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 161px;
+  height: 141px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+
+}
+
+.rojo
+{
+ background-color: var(--rojo-kitt);
+  color: black;
+  border: 3px solid;
+  border-color: var(--color-borde);
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 161px;
+  height: 141px;
+   font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+  border-radius: 8px;
+
+}
+
+.amarillo
+{
+ background-color: var(--amarillo-kitt);
+ border: 3px solid;
+ border-color: var(--color-borde);
+  color: black;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 161px;
+  height: 141px;
+ font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+
+
+
+}
+
+.blanco
+{
+
+ background-color: var(--casi_blanco);
+ border: 3px solid;
+ border-color: var(--color-borde);
+  color: black;
+   border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 161px;
+  height: 141px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+
+
+}
+
+.blanco2
+{
+
+ background-color: var(--casi_blanco);
+ border: 3px solid;
+ border-color: var(--color-borde);
+  color: black;
+   border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 161px;
+  height: 141px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+
+
+}
+  
+  
+  
+  
+  
+  table {
+            width: 300px;
+           border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            border: 10px solid black;
+            padding: 1px;
+            text-align: center;
+            font-size: 64px;
+        }
+
+  .containerb{
+
+               background-color: #151515;
+               width: 400px;
+               height: auto;
+               border: 8px solid var(--mi-gris);
+               padding: 1px;
+               border-radius: 8px;
+
+  }  
+
+.modulo1{
+width:500px;
+height: auto;
+background-color: #53ff55;
+
+
+  }
